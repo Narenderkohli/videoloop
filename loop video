@@ -28,3 +28,10 @@ video code
   {% endif %}
   
   </div>
+  ================================================================================
+     mp4 video code
+=================================================================================
+            <video class="secondvideo" width="100%" controls poster="{{ block.settings.image | img_url:'master'}}">
+  <source src="{{ block.settings.video_mp4 }}" type="video/mp4">
+ </video>
+ ============================================================
