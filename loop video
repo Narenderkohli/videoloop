@@ -1,2 +1,30 @@
 <video loop muted="" autoplay="" playsinline=""  src="https://cdn.shopify.com/videos/c/o/v/9359ad5b9ad841fd954a2d6769e79a13.mp4?autoplay=1&loop=1"  width="100%">
 </video>
+================================================================
+
+ <video autoplay loop muted playsinline width="100%">
+  <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
+</video>
+
+{
+      "type": "text",
+      "id": "videofile",
+      "label": "Video URL",
+      "default": "https://cdn.shopify.com/s/files/1/2018/8867/files/ice.mp4"
+    },
+===================================================================================================
+
+video code
+================================================================================================
+<div class="video">
+  {% if section.settings.videourl.type == "youtube" %}
+  <iframe video_type="{{ section.settings.videourl.type }}" 
+          datavideo-id="{{ section.settings.videourl.id }}" src="https://www.youtube.com/embed/{{ section.settings.videourl.id }}"></iframe>
+  {% else %}
+  <iframe video_type="{{ section.settings.videourl.type }}"  datavideo-id="{{ section.settings.videourl.id }}" src="https://player.vimeo.com/video/{{ section.settings.videourl.id }}"
+          width="640" height="360" frameborder="0" 
+          allowfullscreen></iframe>
+
+  {% endif %}
+  
+  </div>
